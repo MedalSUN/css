@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+
+
+    <style>
+
+
+        /*伪类选择器
+
+        适用于排名会不断的变化。样式不变
+
+        */
+        /*nth-child(1)=first-child*/
+        li:first-child {
+            color:red;
+        }
+
+        li:last-child {
+            color: yellow;
+        }
+
+        li:nth-child(2){
+            color:blue;
+        }
+        li:nth-child(3){
+            color:gray;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<!--
+
+                区分伪元素和伪类
+
+                1：伪类选择器：   使用冒号；
+                2:伪元素：
+
+-->
+<ul id="">
+    <li>泉城</li>
+    <li>烟大</li>
+    <li>鲁东</li>
+    <li>工商</li>
+    <li>文经</li>
+    <li>光电</li>
+    <li>软件</li>
+    <li>法学</li>
+</ul>
+
+
+</body>
+</html>

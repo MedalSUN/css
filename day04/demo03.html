@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css选择器6，7---并集选择器&通用选择器</title>
+
+    <style type="text/css">
+
+
+        /*6:并集选择器：
+        排版div  两行三列
+        每行的高度一样，每列的宽度一样
+
+        #eara1, #eara2, #eara3 {
+            height:300px;
+        }
+        #eara4, #eara5, #eara6 {
+            height:200px;
+        }
+        #eara1, #eara4{
+            width:300px;
+        }
+        #eara2, #eara5{
+            width:200px;
+        }
+        #eara3, #eara6{
+            width:300px;
+        }
+        */
+
+        /*7：通用选择器：
+        三个div块，出现的三个盒子和浏览器边框有边距*/
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #head {
+            height: 100px;
+            background-color: #ff7300;
+        }
+        #body {
+            height: 100px;
+            background-color: blue;
+        }
+        #foot {
+            height: 100px;
+            background-color: gray;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<!--
+                 6:并集选择器：   使用逗号隔开
+                 7：通用选择器：（**基本上所有的元素都会存在一些外边距或者内边距--盒子模型**）
+
+-->
+
+<div id="head"></div>
+<div id="body"></div>
+<div id="foot"></div>
+
+
+
+
+</body>
+</html>
