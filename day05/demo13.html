@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超链接的四种伪类和其他形式的链接</title>
+
+
+    <style>
+
+        /*这四个的顺序不能颠倒！！！！*/
+
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: darkgoldenrod;
+        }
+        a:hover{
+            color: blue;
+        }
+        a:active {
+            color: black;
+        }
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+<a href="http://www.baidu.com" target="_blank">百度</a>
+
+<!--图片链接-->
+<a href="http://www.baidu.com" target="_blank"><img src="../../img/f3.png" alt=""></a>
+
+<!--区域链接-->
+<a href="http://www.baidu.com" target="_blank"><div>xwec</div></a>
+
+<!--列表中的li实现超链接-->
+<ul>
+    <li><a href="http://www.baidu.com" target="_blank">ddfvdc</a></li>
+    <li><a href="http://www.baidu.com" target="_blank">dcvbnm</a></li>
+    <li><a href="http://www.baidu.com" target="_blank">ghjkl</a></li>
+</ul>
+
+
+
+<!--所有的元素都可以添加title属性，当鼠标移动到此标签的内容上时
+就会显示title属性的属性值-->
+
+</body>
+</html>
