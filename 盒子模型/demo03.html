@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子练习</title>
+
+    <style>
+
+        #d1{
+            width: 200px;
+            height: 200px;
+            background-color: #F6AF55;
+            overflow: hidden;
+        }
+        #d2 {
+            width: 100px;
+            height: 100px;
+            background-color: #ff7300;
+
+           margin:0px auto;/*只是用来做水平方向上的居中设置 margin:auto;*/
+           margin-top: 50px;
+            /*在垂直方向上：父块级包含一个子块级，设置margin-top会使整体下移，浏览器是为了
+            提醒设计者，防止子块太大，再加上margin之后会出现溢出的现象。父元素设置一个overflow即可*/
+
+           /* padding-top: 50px;padding的颜色是盒子内部content的颜色。*/
+        }
+
+
+        #d3{
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: #F6AF55;
+
+            /*将垂直方向居中的第二种方法*/
+            box-sizing: border-box;
+            padding-top: 50px;
+        }
+        #d4 {
+            width: 100px;
+            height: 100px;
+            background-color: #ff7300;
+
+            margin:0px auto;/*只是用来做水平方向上的居中设置 margin:auto;*/
+
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+<div id="d1">
+    <div id="d2"></div>
+</div>
+
+
+
+<div id="d3">
+    <div id="d4"></div>
+</div>
+
+
+
+</body>
+</html>
