@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变态盒子模型</title>
+
+    <style>
+
+        #container {
+            width: 100px;
+            height: 100px;
+            background-color: #ff7300;
+            margin:auto;
+            box-sizing: border-box;/*当前的盒子模型就变成非标准盒子模型*/
+
+            border:10px solid yellow;
+            padding: 20px;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<!--
+
+            标准盒子模型的width和height都是给content的。
+
+            非标准的盒子模型，他的宽高包括border，padding，content
+          IE盒子模型（非正规盒子模型。）  box-sizing：border—box；
+
+-->
+
+<div id="container">fghjkl;</div>
+
+
+
+</body>
+</html>
