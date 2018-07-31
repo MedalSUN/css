@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+
+    <title>盒子模型</title>
+
+    <style>
+
+        * {
+            /*浏览器给盒子默认自带了margin*/
+            margin: 0;
+        }
+
+
+        #container {
+
+            width: 200px;
+            height: 200px;
+            background-color: #F6AF55;
+            border: 2px solid yellow;
+            padding: 10px;
+            margin:10px ;
+
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+<!--
+
+         ======在标准盒子模型中宽高都是加在content上边的。
+
+        1：在HTML中任意一个元素都可以被看做是一个盒子。在HTML中盒子是用来装页面内容的。
+        2：盒子模型的基本组成：（w3c下的盒子都分四个部分。）
+            在默认情况下，添加这四个中的任意一个都会使盒子占用的空间变大。
+            1）margin:当前元素和相邻元素的一个间距，外间距。   复合属性：（上下 左右）（上 左右 下）（）
+            2）border
+            3）padding
+            4）content（width，height）
+
+            ========注意：
+            大盒子中嵌小盒子
+            若想要将小盒子离外边的大盒子的边框远一点，要使用小盒子的margin，而不是外边盒子的padding
+            因为使用了padding就会将盒子的形状发生变化，而margin只是控制元素和相邻元素的
+            距离所以改变他不会将盒子的形状发生变化。
+
+
+
+-->
+
+
+<div id="container"></div>
+
+
+
+</body>
+</html>
