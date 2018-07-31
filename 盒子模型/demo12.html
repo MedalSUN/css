@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>outline属性</title>
+
+
+    <style>
+
+        input:focus {
+            outline: none;
+            /*当点击到输入框的时候，使用outline：none，取消外边线*/
+            outline: 2px solid red; /*类似于border可以调整外边线的样式*/
+
+
+
+            /*注意：使用outline可以增大外边线，但是他不会改变盒子的大小，不占用空间
+            但是！！！他会影响附近的元素。挡住等现象。*/
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<input type="text">
+
+</body>
+</html>
