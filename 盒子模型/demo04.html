@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calc计算</title>
+
+
+    <style>
+
+        #d1 {
+            width: 300px;
+            height: 300px;
+            background-color: #ff7300;
+        }
+
+        #d2 {
+
+            height: 100px;
+            background-color:yellow;
+            width: calc(50% - 10px);
+            /*在父元素宽度50%的基础上少10px*/
+            /*calc（）：css中用于计算，在calc中运算符的两边必须添加空格*/
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+
+
+    <div id="d1">
+        <div id="d2"></div>
+    </div>
+
+
+</body>
+</html>
