@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位实现垂直居中</title>
+
+
+    <style>
+        #d1 {
+            background-color: #d974ff;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        #d2 {
+            background-color: #5A688F;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+           /*
+             负边距实现元素居中的效果
+            left: 50%;先向右偏移50%
+            margin-left: -25px;再使用负边距向左偏移25px
+            top:50%;
+            margin-top: -25px;*/
+
+            left: calc(50% - 25px);/*水平居中*/
+            top:calc(50% - 25px);/*垂直居中*/
+
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+
+<div id="d1">
+    <div id="d2"></div>
+</div>
+
+</body>
+</html>
