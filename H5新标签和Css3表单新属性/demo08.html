@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5的表单新属性</title>
+
+    <style>
+
+
+    </style>
+
+
+</head>
+<body>
+
+<form action="kk.java" >
+
+    <button disabled>登录</button>
+    <!--disable禁用作用，按钮是灰色的。配合js完成没有输入完不能点击的作用-->
+
+
+
+
+    用户1：<input type="text" name="aaa" value="ddd" readonly>
+    <!--readonly修饰的元素是不参与信息提交的。提交不上去。-->
+
+
+    用户2：<input type="text" name="a" value="" maxlength="10">
+    <!--maxlength 限制最大输入字符数-->
+
+    <!--size属性设置输入框的宽度
+        但是输入框是行内块元素，所以没有必要使用行内样式，直接使用css的width即可。
+    -->
+
+    <!--list属性，可以从数据库中提出来数据，并且对用户进行提示
+        有区别与下拉框和输入框，这个功能既可以选也可以输入
+        在输入框中使用list和datalist中的id关联起来，，传输的数据时option中的value
+    -->
+    <input type="text" name="num" list="sun">
+    <datalist id="sun">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </datalist>
+
+    <!--登录地址是kk.java 方法是默认的get-->
+    <button>登录1</button>
+    <!--登录地址是cc.java 方法是post-->
+    <button formaction="cc.java" formmethod="post"></button>
+    <!--注意formaction和formmethod只有在button提交按钮，还有image提价按钮中才可以使用-->
+
+
+</form>
+
+</body>
+</html>
