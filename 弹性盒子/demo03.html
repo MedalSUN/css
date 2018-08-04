@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子练习2</title>
+
+
+    <!--之前通过浮动和定位完成的都可以使用弹性盒子来完成。-->
+
+    <style>
+
+        #container {
+            display: flex;
+            background-color: #cccccc;
+            width: 600px;
+            height: 50px;
+            margin:10px auto;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #d1 {
+            width: 20%;
+            background-color: #d974ff;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #d2 {
+            background-color: #F6AF55;
+            width: 50%;
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .item {
+            width: 15%;
+            height: 20px;
+            line-height: 20px;
+            background-color: #49ff60;
+            font-size:10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div id="container">
+    <div id="d1"><span>搞机派</span></div>
+    <div id="d2">
+        <div class="item">JAVA</div>
+        <div class="item">HTML</div>
+        <div class="item">JS</div>
+        <div class="item">Android</div>
+        <div class="item">C++</div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

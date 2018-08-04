@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子练习3</title>
+
+    <!--之前通过浮动和定位完成的都可以使用弹性盒子来完成。-->
+
+    <style>
+
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            height: 300px;
+
+            flex-direction: column;
+            justify-content:space-between;
+            /*当摆放方向变为向下的时候，垂直摆放样式要用justify-content*/
+            margin:0 auto;
+        }
+
+        #d1{
+            height:25%;
+            width:100%;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+        }
+
+        #d1-1{
+            height:100%;
+            width:24%;
+            background-color: #d974ff;
+
+        }
+        #d1-2{
+            height:100%;
+            width:49%;
+            background-color: yellow;
+
+        }
+        #d1-3{
+            height:100%;
+            width:24%;
+            background-color:gray;
+
+        }
+
+
+        #d2 {
+            height:18%;
+            width:100%;
+            background-color:red;
+        }
+
+        #d3 {
+            height: 50%;
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;/*边上不对齐！！！*/
+        }
+        #d3-1 {
+            height: 100%;
+            width:69%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #d3-1-1{
+            height: 49%;
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #s1 {
+            height: 100%;
+            width:39%;
+            background-color: blue;
+        }
+        #s2 {
+            height: 100%;
+            width:59%;
+            background-color: yellow;
+
+        }
+
+
+
+        #d3-1-2{
+            height: 49%;
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #s3 {
+            height: 100%;
+            width:39%;
+            background-color: blue;
+        }
+        #s4 {
+            height: 100%;
+            width:59%;
+            background-color: yellow;
+        }
+
+
+        #d3-2 {
+            height: 100%;
+            width:29%;
+            background-color: bisque;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+<div id="container">
+
+    <div id="d1">
+        <div id="d1-1"></div>
+        <div id="d1-2"></div>
+        <div id="d1-3"></div>
+    </div>
+    <div id="d2"></div>
+
+    <div id="d3">
+        <div id="d3-1">
+            <div id="d3-1-1">
+                <div id="s1"></div>
+                <div id="s2"></div>
+            </div>
+            <div id="d3-1-2">
+                <div id="s3"></div>
+                <div id="s4"></div>
+            </div>
+        </div>
+        <div id="d3-2"></div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

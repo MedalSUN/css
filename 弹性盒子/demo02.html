@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子练习1</title>
+
+    <!--之前通过浮动和定位完成的都可以使用弹性盒子来完成。-->
+
+
+    <style>
+
+        #container {
+            display: flex;
+            height: 200px;
+        }
+        #d1 {
+            background-color: #55ceff;
+            width: 25%;
+            height: 200px;
+        }
+        #d2 {
+            width: 25%;
+            height: 200px;
+        }
+        #d2-1{
+            background-color: #d974ff;
+            height: 100px;
+        }
+        #d2-2{
+            background-color: #F6AF55;
+            height: 100px;
+
+        }
+
+        #d3 {
+            background-color: gray;
+            width: 20%;
+            height: 200px;
+        }
+        #d4 {
+            width: 30%;
+            height: 200px;
+        }
+        #d4-1{
+            display: flex;
+            height: 100px;
+        }
+        #d4-1-1 {
+            background-color: red;
+            width: 50%;
+        }
+        #d4-1-2 {
+            background-color: #d974ff;
+            width: 50%;
+        }
+
+        #d4-2{
+            background-color: #49ff60;
+            height: 100px;
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="container">
+
+    <div id="d1"></div>
+    <div id="d2">
+        <div id="d2-1"></div>
+        <div id="d2-2"></div>
+    </div>
+    <div id="d3"></div>
+    <div id="d4">
+        <div id="d4-1">
+            <div id="d4-1-1"></div>
+            <div id="d4-1-2"></div>
+        </div>
+        <div id="d4-2"></div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
