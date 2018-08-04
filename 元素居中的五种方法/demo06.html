@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子元素的居中2</title>
+
+    <style>
+
+
+
+        #father {
+            border: 1px solid red;
+
+            width: 200px;
+            height: 200px;
+            display: table-cell;
+            /*使用table-cell方法将元素居中
+                改变父子元素尺寸都不会改变。
+            */
+
+            vertical-align: middle;/*设置垂直方向上的居中。现在不使用valign属性，*/
+
+        }
+        #son {
+            margin:0 auto;
+            background-color: #d974ff;
+            width:50px;
+            height: 50px;
+
+
+
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+<div id="father">
+    <div id="son"></div>
+</div>
+
+
+</body>
+</html>
