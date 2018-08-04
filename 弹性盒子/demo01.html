@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子</title>
+
+    <style>
+
+        #father{
+            height: 400px;
+            border: 1px solid red;
+            display: flex;
+            /*father中的三个子元素采用弹性布局====不论水平还是垂直在默认情况下，只要显示不开就会等比例压缩*/
+            /*子元素既不用全部使用浮动（让子元素水平排放），父元素也不会产生高度坍塌，也不用使用清除浮动现象*/
+
+            /*子元素摆放的方向*/
+            flex-direction: row;
+            /*垂直方向上为自动压缩放在父容器中，而不会产生超出父容器的现象。*/
+
+
+
+            /*水平方向的换行*/  /*如果*/
+            flex-wrap: nowrap;/*默认不换行，进行自动等比例压缩。*/
+
+
+            /*子元素的水平对齐方式*/
+            justify-content:space-between;
+            /*
+            1:flex-start :开始方向对齐
+            2:flex-end:
+            3:center:
+            4:space-between 两端靠边，中间距离均分
+            5:space-around  两端不靠边，距离是中间距离的一半。
+            */
+
+            /*元素垂直方向上的对齐方式
+            align-items:center;*/
+            /*
+                1：center：居中（此时需要指定高度！！！子元素要有确定的高度）
+                2：flex-start/end
+                3:baseline:子元素里面的第一行文字的基线处于同一条线上
+                4：stretch（当子元素没有高度时的默认值），注意此时一定不能指定height，否则不能拉伸。
+            */
+
+        }
+
+
+        #son1 {
+
+            width: 30%;
+            height: 200px;
+            background-color: #55ceff;
+            order: 2;
+            flex-shrink: 0;/*空间不足时的不压缩*/
+
+        }
+        #son2 {
+
+            width: 40%;
+            height: 200px;
+            background-color: yellow;
+            order: 1;
+            flex-shrink: 0;/*设置为0，表示不压缩*/
+
+
+
+        }
+        #son3 {
+
+            width: 20%;
+            height: 200px;
+            background-color: gray;
+            order: 3;
+
+        }
+
+        /*
+                #son4 {
+
+                    width: 30%;
+                    height: 200px;
+                    background-color: yellow;
+                    order: 4;
+                }
+                       #son5 {
+
+                           width: 20%;
+                           height: 200px;
+                           background-color: gray;
+
+                       }
+                       #son6 {
+
+                           width: 20%;
+                           height: 200px;
+                           background-color: yellow;
+                       }
+                       #son7 {
+
+                           width: 20%;
+                           height: 200px;
+                           background-color: gray;
+
+                       }
+               */
+
+    </style>
+
+
+
+
+</head>
+<body>
+<!--
+
+            给父元素添加属性：
+ 1： 如果一个普通元素（用来包裹东西的父元素）想成为弹性元素，只需要将这个父元素的display改为flex
+ 2： 弹性盒子基本山是添加给父元素的，为的是让其中的子元素可以按照弹性布局进行布局，如果子元素中仍然存在孙子元素需要
+ 按照flex进行布局，那么仍然需要对这个子元素进行设置display：flex====（display属性不能被继承）
+ 3：如果父元素添加了flex的display属性，那么他的子元素的float，clear，垂直居中都会失效。
+ ===（使用了弹性盒子布局，那就不要再使用浮动和定位）。使用弹性盒子直接可以将块元素水平排放。
+ 4：对文本使用text-align：justify，可以让文本的两端对齐！
+
+-->
+
+<!--
+            给子元素添加的属性：
+            1：order属性，指定显示位置，默认为0，所以所有的子元素都要设定order===双飞翼布局巧妙实现。
+            2：flex-grow:,元素的剩余空间分配比例，默认为0（不分配）,值越大分配的比例越多。
+            3: flex-shrink: 空间不足的时候盒子模型默认等比例压缩，默认为1！！！！。当设置为0的时候不压缩，其他的元素 flex-shrink值越大，压缩的比例越大
+            4：flex-basic: 设置这一属性的元素将先固定住最基础的宽度，再flex-grow剩下的剩余空白，如果
+            剩余空间不足他将会去挤压两边的元素。====可以应用于双飞翼布局
+            5：align-self:区别于父元素的justify-content，可以设置元素自己的对齐方式
+
+-->
+
+
+
+<div id="father" >
+    <div id="son1">son1</div>
+    <div id="son2">son2</div>
+    <div id="son3">son3</div>
+    <!--<div id="son4">son4</div>
+     <div id="son5">son5</div>
+     <div id="son6">son6</div>
+     <div id="son7">son7</div>-->
+
+</div>
+
+</body>
+</html>
