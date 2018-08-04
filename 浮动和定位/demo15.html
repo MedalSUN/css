@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+
+        #con {
+            width: 306px;
+            height: 142px;
+            margin:100px auto;
+
+            background-image: url("../../../img/duo.png");
+            position:relative;
+        }
+
+        #i1 {
+
+            position:absolute;
+            top: 25px;
+            opacity: 0;
+
+        }
+        /*======================================================
+        ======================并集能使用伪类选择器吗==============================
+        =============================================*/
+        #i1,#i2,#i3,#i4 :hover {
+            opacity: 1;
+        }
+        #i2 {
+
+            position:absolute;
+            top: -25px;
+            left: 48px;
+            opacity: 0;
+
+        }
+        #i3 {
+
+            position:absolute;
+            top: -24px;
+            left: 159px;
+            opacity: 0;
+
+        }
+        #i4 {
+
+            position:absolute;
+            top: 32px;
+            left: 217px;
+            opacity: 0;
+
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div id="con">
+
+    <img src="../../../img/duo1.png" alt="" id="i1">
+    <img src="../../../img/duo2.png" alt="" id="i2">
+    <img src="../../../img/duo3.png" alt="" id="i3">
+    <img src="../../../img/duo4.png" alt="" id="i4">
+
+
+</div>
+
+
+</body>
+</html>

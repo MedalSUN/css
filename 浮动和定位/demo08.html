@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距叠加的现象,造成的父子一起移动的现象</title>
+
+    <style>
+
+        #out {
+            background-color: #5A688F;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+        #in{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin-top: 40px;
+            margin:40px auto;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--
+
+demo10做了一部分实验
+
+        根据渲染规则，在具有包含关系的嵌套元素中，如果父元素没有上边框或者上内边距，那么在子元素
+        设置margin-top等时父元素会随着子元素一起在垂直方向上发生移动
+
+        ====有三种解决方式
+        前两种都会在标准盒子模型中影响盒子模型，所以应当在父元素上使用overflow：hidden属性。
+
+-->
+
+<div id="out">
+
+    <div id="in"></div>
+
+</div>
+
+
+</body>
+</html>

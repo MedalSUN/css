@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #left {
+            width:100px;
+            height: 100px;
+            background-color:red ;
+            float: left;
+        }
+        #center {
+            width:100px;
+            height: 100px;
+            background-color:gray;
+            float: left;
+            position: relative;
+            top:20px;
+        }
+        #right {
+            width:100px;
+            height: 100px;
+            background-color:yellowgreen;
+            float: left;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+      <!--
+            1：只给这个元素添加一个相对定位relative，这个元素的位置是不会变化的！（为绝对定位铺垫）
+            2: 相对定位是只针对元素之前的位置进行移动的。
+            3： 元素相对定位偏移了之后，他原来显示的空间位置会被保留。
+            4：使用z-index可以调整在z轴显示的顺序。不能无限大和无限小。比如说，网页的返回页面
+                顶部的按钮，再不断移动的时候，会经过定位元素，此时要设置z-index要设置为1000（最大）
+                这样才能显示为一直浮在最上边
+      -->
+
+
+      <div id="left"></div>
+      <div id="center"></div>
+      <div id="right"></div>
+
+
+</body>
+</html>

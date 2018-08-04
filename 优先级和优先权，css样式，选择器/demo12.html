@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单介绍宽高属性对行块元素的设置影响。</title>
+
+
+    <style>
+
+        /*总结出所有的块级元素对宽高都有效*/
+        #s1 {
+            width: 300px;
+            height:300px;
+            background-color: #ff7300;
+        }
+
+        #s2 {
+            width: 100px;
+            height:100px;
+            background-color: yellow;
+
+        }
+
+        /*大多数行内元素，宽高是无效的，但是有那么几个特殊的，如 （form表单中最多）：
+        input输入框，select下拉框（特殊的输入框），textarea输入域（特殊的输入框）；
+        img等是有效的（回答他们是什么元素的时候要说：**是行级元素但是具有块级元素的特点）。*/
+        #s3
+        {
+            background-color: fuchsia;
+            width: 300px;
+            height: 300px;
+        }
+        img {
+            width: 100px;
+            height:auto;/*不写的时候就是auto*/
+        }
+        input {
+            width: 100px;
+            height:100px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div id="s1"></div>
+
+<p id="s2">zhonggup</p>
+
+<span id="s3">scsececq</span>
+<br>
+
+<img src="../../img/first.jpg" alt="">
+
+<br>
+
+<form action="">
+    <input type="text">
+</form>
+
+</body>
+</html>
