@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css中的长度单位</title>
+
+    <style>
+
+        span {
+            font-size: 2em;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<!--
+        1：px
+        2：%
+        3：em，  1）相对于当前页面的相邻元素的大小。
+                2)注意是相邻元素（如果有嵌套关系，使用em，会将每一层的字体都会呈指数增大）！！！！
+
+        4：rem：只和根root进行比较。===body中进行设置font-size。
+                1)为了解决em的弊端，需要使用对照根元素进行字体大小的变化。
+                ===一键换肤，可维护性极强！！！！
+                2)如果在根元素中设置font-size:62.5%那么将会使1em变为10px、
+                此时字体具有继承的特点，整个树的1字体的标准大小为10px。
+
+
+-->
+
+<p>中苏吧苏黑金四姐夫 <span>你呢堵<span>你呢堵车依然</span>车依然</span> 牛吃大亏</p>
+
+
+</body>
+</html>
