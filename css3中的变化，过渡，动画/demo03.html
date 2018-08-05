@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+
+    <style>
+
+        #d1 {
+            background-color: #ffde1e;
+            width: 220px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            font-size: 16px;
+            color: white;
+        }
+
+        #drop {
+            height: 0px;
+            width: 220px;
+            background-color: #55ceff;
+            transition: all 1s ease;
+        }
+        #d1:hover #drop {
+            height: 350px;
+
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div id="d1">
+    最新开班信息
+
+    <!--
+    遇见下拉框展开和隐藏的时候，需要给父元素增加overflow：hidden的属性
+    下拉框会随着父元素高度的上升慢慢的增大显现出来，没有出现是因为
+    被overflow隐藏了。
+    -->
+
+    <div id="drop">
+        <div id="top">
+            ghjkl
+            fghjk
+            ghjkl
+            fghjk
+            fghjd
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
