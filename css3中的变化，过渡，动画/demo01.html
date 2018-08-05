@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>过渡效果</title>
+
+
+    <!--给变化transform（三个）增加一个平滑的过渡transtion效果-->
+
+    <style>
+
+        #d1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin:0 auto;
+            transition:all 4s ease 2s;/*过渡效果，要放在hover外边。*/
+            overflow: hidden;
+        }
+
+        #d1:hover{
+            transform: rotateY(180deg);
+        }
+
+
+
+        img{
+            transition:all 2s ease 0s;
+        }
+        img:hover{
+            transform: scale(1.2);
+
+        }/*!*给图片增加过渡效果，放在hover外边，才能变回来。**/
+
+
+    </style>
+
+
+</head>
+<body>
+
+<!--
+transtion-timing-function:
+
+如果想要将所有的变化的过渡效果都一样，可以使用复合属性
+transtion：all，过渡总时间，过渡时间曲线，延迟时间；
+
+
+-->
+
+
+<div id="d1">
+    <img src="../../../img/first.jpg" alt="">
+</div>
+
+
+
+</body>
+</html>
