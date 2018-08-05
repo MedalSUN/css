@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3中的选择器</title>
+
+    <!--相邻选择器-->
+
+    <style>
+        /*
+                相邻元素选择器
+              1：必须是同级元素之间的
+              2：必须是直接相邻，中间有隔着的都不行！！！！只能是下边紧挨着的那一个
+              3：能被选中的只有一个，而且只能向下找。
+              4：相邻选择器不包括自己
+
+        */
+        #d1+div {
+            border:1px solid yellow;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+<div>
+    <div id="d1">div1</div>
+    <p>p1</p>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+</div>
+
+
+
+</body>
+</html>
