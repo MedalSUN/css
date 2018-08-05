@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        #con {
+            background-color: black;
+            height:800px;
+            position: relative;
+        }
+
+        /*给烟花1增加一个炸开的动画效果*/
+        @keyframes yanhua1 {
+            0%{
+                transform: scale(0);
+            }
+            60%{
+                transform: scale(1);
+                opacity: 1;
+            }
+            80%{
+                transform: scale(1);/*烟花1要慢慢地消失，不能突然消失。*/
+                opacity: 0.3;
+            }
+
+            90%{
+                transform: scale(1);
+                opacity: 0.15;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+
+        }
+
+
+        #yan1{
+            position: absolute;
+            transform: scale(0);
+            left:calc(50% - 253px);
+            top:calc(50% - 253px);
+            animation: yanhua1 5s 3s;/*烟花1要等待烟花2.delay*/
+
+        }
+        @keyframes yanhua2 {
+            0% {
+
+                transform:scale(1);
+            }
+            99%{
+                bottom: 359px;
+                transform:scale(0.2);
+            }
+
+
+            100%{
+                bottom: 360px;
+                transform:scale(0);
+
+            }
+
+        }
+
+
+        #yan2{
+            position: absolute;
+            width: 20px;
+            left:calc(50% - 10px);
+            bottom: 0;
+            animation: yanhua2 3s forwards;/*forwards动画执行完之后，就不再回来。*/
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+<div id="con">
+
+    <img id="yan1" src="../../../img/yanhua1.png" alt="">
+    <img id="yan2" src="../../../img/yanhua2.png" alt="">
+</div>
+
+</body>
+</html>

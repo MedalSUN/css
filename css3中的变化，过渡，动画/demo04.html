@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        /*d定义动画规则*/
+        @keyframes sss {
+            50%{/*从零到百分之五十的时间是这个图片*/
+               background-image:url("../../../img/banner1.jpg") ;
+                background-size: 100% 100%;
+            }
+            90%{/*百分之五十之后的时间到第百分之九十的时间是这张*/
+                background-image:url("../../../img/banner2.png") ;
+                background-size: 100% 100%;
+            }
+            100%{/*上一张执行完之后，一直到最后。*/
+                background-image:url("../../../img/banner3.jpg") ;
+                background-size: 100% 100%;
+            }
+        }
+
+        #banner {
+            width: auto;
+            height: 300px;
+            background-image:url("../../../img/banner1.jpg") ;
+            background-size: 100% 100%;
+            border: 1px solid red ;
+            /*使用动画*/
+            animation: sss 12s infinite;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <div id="banner">
+
+
+
+    </div>
+
+
+
+</body>
+</html>
