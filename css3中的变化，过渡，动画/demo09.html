@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3的平移，缩放，旋转</title>
+
+
+    <!--区分好三个方法。-->
+
+
+    <style>
+
+        #d1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+
+            /*transform: translate(20px,50px);
+            平移向右20px，向下50*/
+            /*translateY（20px） 可以进行单一方向上的移动*/
+
+            /*放大 ,倍数关系
+            也可以但因方向上去设定scaleY
+            transform: scale(1.5);*/
+
+
+
+            /*旋转===空间3D效果进行旋转
+            transform: rotate(45deg);*/
+            /*默认旋转方向是中心点
+                rotateX/Y旋转是以X/Y进行旋转，九十度就看不见了
+            */
+
+            /*
+            定义沿着 X 和 Y 轴的 2D 倾斜转换。
+            */
+            transform: skew(45deg);
+
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<!--css变形-->
+
+<div id="d1"></div>
+
+
+</body>
+</html>
