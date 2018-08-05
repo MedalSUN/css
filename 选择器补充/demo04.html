@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器（属性值选择器）</title>
+
+    <style>
+
+        /*找到所有具有相同属性的元素*/
+
+        /*找出具有id属性的div元素
+        div[id] {
+            color: red;
+        }*/
+
+        /*找出id属性值等于d1的div元素
+        div[id='d1'] {
+            background-color: #d974ff;
+        }*/
+
+        /*id以d开头的属性值，的div元素
+        div[id^='d']{
+            background-color: #cccccc;
+        }
+        */
+
+        /*id以d开头的属性值所有的元素
+        *[id^='d']{
+            background-color: #cccccc;
+        }*/
+
+        /*选中所有属性值以1结尾的元素。
+        *[id$='1']{
+            font-size: larger;
+        }*/
+
+        /*选中属性值中包含指定值的元素
+        *[id*='i']{
+            background-color: #49ff60;
+        }*/
+
+
+        /*找到不含有某一属性的元素*/
+        /*not也是一个伪类*/
+        *:not([id]){
+            font-size: 24px;
+        }
+
+        /*font-size是可以继承的。body和HTML标签都没有id属性*/
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+<!--
+            写在标签内部的都是属性
+        1：以**开头的
+        2：以**结尾的
+        3：包含某一种属性的
+        4：包含某一种属性：属性值的元素
+        5：选中属性值中包含指定值的元素
+
+-->
+
+
+<div id="d1">d1</div>
+<div id="di2">d2</div>
+
+<div>d3 没有id属性</div>
+
+<p id="d4">p1</p>
+
+
+
+
+</body>
+</html>
