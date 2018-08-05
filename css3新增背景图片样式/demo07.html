@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3中新增的背景图片属性1</title>
+
+    <style>
+
+
+
+
+        #container{
+            height: 400px;
+            border: 50px dotted red;
+            padding: 20px;
+            margin: 20px;
+            background-image: url("../../../img/first.jpg");
+            background-size:100% 100%;/*先是x轴，后是y轴   设置背景图片的尺寸。*/
+
+
+
+
+            background-origin:border-box;/*从border的外边缘开始显示*/
+            /*
+            =====没有margin-box
+            注意这是背景图片，所以，他可以在border，padding，content下边显示。
+            图片的起点默认为padding-box。左上角
+            border-box
+            content-box：从content的外边缘开始显示
+            */
+
+            /*裁剪区小于显示区域，会被裁减掉  **-box  外边的东西*/
+            background-clip:padding-box;/*从paddingbox开始裁剪*/
+
+
+            /*可以添加background-position属性进行调整图片的位置。*/
+
+        }
+
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+<!--
+
+<div id="container"></div>
+-->
+
+<div id="con">
+    <div id="fa">
+        <div id="son"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
