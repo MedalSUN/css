@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类结构选择器</title>
+
+    <style>
+
+
+        /*nth-child 是不区分元素类型的，
+        只是按照顺序依次进行判断，
+        如果符合就添加对应的样式
+
+        #d > div:nth-child(2n-1) {
+            color: #49ff60;
+        }
+*/
+
+
+        /*
+            在上边的基础上进行区分元素的类型。
+            匹配第一层后代中的所有元素，
+            再根据顺序进行添加样式。
+
+        #d > div:nth-of-type(2n){
+            color: red;
+        }*/
+
+        /*
+            从后往前进行添加样式。
+
+        #d > div:nth-last-of-type(2n){
+            color: #49ff60;
+        } */
+
+        /*
+                p {
+                    text-indent: 2em;
+                }*/
+
+        /*某一个元素的第一个字符
+        p:first-letter{
+            color: #7d89ff;
+        }*/
+        /*某一个元素的第一行
+        p:first-line {
+            color: #49ff60;
+        }*/
+
+
+        /*
+            选择器可以根据被选择input输入框元素是否可以使用进行选择
+
+        input:enabled {
+            color: #d974ff;
+        }
+        input:disabled {
+            color: #F6AF55;
+        }
+        */
+
+        /*选择器根据是否被选中checked进行选择。
+        input:checked{
+            outline: 1px solid red;
+        }
+
+        被选中的元素的附近元素汉字可以变成特定的样式
+
+        注意必须是相邻的元素添加元素，不能是裸露的文字。
+        input:checked + span  {
+            color: #49ff60;
+        }*/
+
+
+        /*
+            在输入框中设置autofocus，即为自动获取焦点
+            使用focus选择器进行选择
+
+        input:focus {
+            outline: none;
+        }
+*/
+
+
+        /*选中当前活动的锚点
+        p:target {
+            color: #49ff60;
+        }
+*/
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+<div id="d">
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <p>p</p>
+    <div>div4</div>
+    <div>div5</div>
+    <div>div6</div>
+    <div>div7</div>
+</div>
+
+<p>
+    中国计算机热潮虐多吃素分别和监督等你回复我服好吃不恶意士大夫凤凰城开放男
+    热潮虐多吃素分别和监督等热潮虐多吃素分别和监督等热潮虐多吃素分别和监督等
+    热潮虐多吃素分别和监督等热潮虐多吃素分别和监督等热潮虐多吃素分别和监督等
+</p>
+
+
+<!--
+        放在一些表单元素中
+-->
+
+<form action="">
+    <input type="text" value="123">
+    <input type="text" value="123" disabled>
+
+
+
+    <!--label属性，让文本和选择框联系起来，成为一个整体（点击label中的内容也可以选中），提高用户的体验感。
+        关联关系通过label中的for属性进行关联，在需要关联的元素中设置id属性，进行关联。
+    -->
+
+    <input type="radio" name="sex" value="x" id="b" checked><label for="b">男</label>
+    <input type="radio" name="sex" value="s" id="g"><label for="g">女</label>
+
+    <input type="text" autofocus>
+
+
+
+</form>
+
+<!--
+        锚点
+-->
+
+<p id="p1">zhonjshfe</p>
+<p id="p2">zhonjshfe2</p>
+
+<!--注意，href中必须要添加#-->
+<a href="#p1">p1</a>
+<a href="#p2">p2</a>
+
+</body>
+</html>
