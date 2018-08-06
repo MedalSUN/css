@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon-32x32.png">
+    <title>星享俱乐部-即刻加入，即可为门店消费积星享好礼|星巴克</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+
+        }
+
+        #nav {
+            width: 404px;
+            height: 640px;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            border-right: 2px solid gray;
+
+        }
+
+        #con_right {
+            width: 944px;
+            height: auto;
+            background-color: #F7F7F7;
+            float: right;
+        }
+
+        #nav_header {
+            box-sizing: border-box;
+            width: 404px;
+            height: 96px;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #nav_header ul {
+            width: auto;
+            display: flex;
+        }
+
+        #nav_header ul li {
+            list-style: none;
+            width: 65px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        #nav_header ul li a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #nav_body {
+            width: 404px;
+            height: 195px;
+            box-sizing: border-box;
+            padding-left: 84px;
+            padding-right: 24px;
+        }
+
+        #nav_body_banner {
+            width: auto;
+            height: 72px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #nav_body_ul {
+            width: auto;
+            height: 111px;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        #nav_body_ul li:not(:nth-child(3)) a {
+            text-decoration: none;
+            color: #aab0d9;
+        }
+
+        #nav_body_ul li:nth-child(3) a {
+            font-weight: bold;
+            font-size: 20px;
+            color: black;
+        }
+
+        #con_right_top {
+            width: 768px;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 0 24px;
+        }
+
+        #top_one {
+            display: flex;
+            background-color: white;
+            border: 1px solid gray;
+
+        }
+
+        #top_one_left {
+            width: 360px;
+            height: 299px;
+            background-image: url("img/stars.gif");
+            background-size: 100% 100%;
+        }
+
+        #top_one_right {
+            width: 360px;
+            height: 299px;
+            padding: 24px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        #top_one_right a {
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            display: block;
+            border: 2px solid blue;
+            border-radius: 5px;
+            position: absolute;
+            right: 30px;
+            bottom: 24px;
+            text-decoration: none;
+        }
+
+        #top_two {
+            box-sizing: border-box;
+            height: 438px;
+            width: 768px;
+            padding: 48px 24px 60px 24px;
+            display: flex;
+
+        }
+
+        #top_two_lef {
+            box-sizing: border-box;
+            width: 360px;
+            height: 330px;
+            padding: 6px;
+        }
+
+        #top_two_right {
+            box-sizing: border-box;
+            width: 360px;
+            height: 330px;
+            padding: 117px 37px 110px;
+        }
+
+        #top_three {
+            box-sizing: border-box;
+            width: 720px;
+            /*height: 351px;--------------------*/
+
+        }
+
+        #top_three ul li {
+            list-style-image: url("img/listtype.png");
+        }
+
+        #card1 {
+            height: 130px;
+            background-color: #E0E0E0;
+            border-radius: 5px;
+            padding: 24px 36px 0px 36px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+
+        }
+
+        #card1:hover {
+            height: 350px;
+        }
+
+        #card2 {
+            height: 130px;
+            background-color: #00A862;
+            border-radius: 5px;
+            padding: 24px 36px 0px 36px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            color: white;
+        }
+
+        #card2:hover {
+            height: 350px;
+        }
+
+        #card3 {
+            height: 130px;
+            background-color: #C2A661;
+            border-radius: 5px;
+            padding: 24px 36px 0px 36px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            color: white;
+        }
+
+        #card3:hover {
+            height: 350px;
+        }
+
+        #con_right_center {
+            box-sizing: border-box;
+            width: auto;
+            height: 267px;
+            background-color: white;
+            padding: 48px;
+        }
+
+        #fa {
+            width: 768px;
+            height: 194px;
+            display: flex;
+            margin: 0 auto;
+
+        }
+
+        #fa div {
+            margin: 0 auto;
+            box-sizing: border-box;
+            width: 384px;
+            height: 194px;
+            padding: 24px;
+            position: relative;
+        }
+
+        #fa div a {
+            display: block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid green;
+            text-decoration: none;
+            border-radius: 15px;
+            position: absolute;
+            right: 30px;
+            bottom: 24px;
+        }
+
+        #con_right_foot {
+            width: 720px;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+
+        #con_right_foot #top1 {
+            height: 30px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .foot_question {
+            height: 55px;
+            padding: 18px;
+            background-color: white;
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .foot_question img {
+            position: absolute;
+            right: 3px;
+            top: 5px;
+        }
+
+        .foot_question h2 {
+            margin-bottom: 18px;
+        }
+
+        #foot_question1:hover {
+            height: auto;
+        }
+        #foot_question1:hover #foot_question1 img{
+            right: 30px;
+        }
+
+        #foot_question2:hover {
+            height: auto;
+        }
+
+        #foot_question3:hover {
+            height: auto;
+        }
+
+        #con_right_final {
+            height: 30px;
+            width: 80px;
+            border: 1px solid green;
+            border-radius: 4px;
+            color: green;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div id="container">
+    <div id="nav">
+        <div id="nav_header">
+            <ul>
+                <li><a href=""><img src="img/favicon-32x32.png" alt=""></a></li>
+                <li><a href="">门店</a></li>
+                <li><a href="">我的账户</a></li>
+                <li><a href="">菜单</a></li>
+            </ul>
+            <img src="img/nav.png" alt="">
+        </div>
+        <div id="nav_body">
+            <div id="nav_body_banner">登录或创建一个新账户</div>
+            <div id="nav_body_ul">
+                <li><a href="">登录</a></li>
+                <li><a href="">注册</a></li>
+                <li><a href="">关于星享俱乐部</a></li>
+            </div>
+        </div>
+    </div>
+    <div id="con_right">
+
+        <div id="con_right_top">
+            <div id="top_one">
+                <div id="top_one_left"></div>
+                <div id="top_one_right">
+                    <h2>
+                        APP专属礼遇
+                        <br>
+                        十元立减金开启星享之旅星巴克</h2>
+                    <br>
+                    <h4>
+                        新用户在线购买任意面额星礼卡注册成为星享俱乐部会员，
+                        立减 10 元。马上开启星享之旅，享丰富会员好礼！
+                    </h4>
+                    <a href="">立即注册</a>
+                </div>
+            </div>
+            <div id="top_two">
+                <div id="top_two_lef">
+                    <p style="margin-bottom: 18px">星巴克星享俱乐部</p>
+                    <h2 style="margin-bottom:24px;">星享俱乐部</h2>
+                    <p style="margin-bottom:24px;">
+                        新用户在线购买任意面额星礼卡注册成为星享俱乐部会员，
+                        立减 10 元
+                    </p>
+                    <p style="color: goldenrod">每积累超过50元，即可获赠一个星星</p>
+                    <p style="margin-bottom:24px;">星星越多好礼越多</p>
+                    <p style="margin-bottom:24px;">立即下载星巴克APP,享受更多好礼</p>
+
+                </div>
+                <div id="top_two_right">
+                    <img style="width: 286px;height: 103px" src="img/card-msr-unlogged.png" alt="">
+                </div>
+            </div>
+            <div id="top_three">
+
+                <!--三个移动的卡-->
+                <div id="card1">
+                    <img style="width: 180px;height: 100px" src="img/welcome.png" alt="">
+                    <div>
+                        <h3 style="margin-bottom: 30px">银星级</h3>
+                        <p>阿根廷凉透了根廷凉根廷凉根廷凉根廷凉根廷凉</p>
+                        <p style="margin-bottom: 20px">
+                            阿根廷凉透了根廷凉根廷凉根廷凉根廷凉根廷
+                        <p>
+                        <ul>
+                            <li>升杯邀请券</li>
+                            <li>升杯邀请券</li>
+                            <li>升杯邀请券</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div id="card2">
+                    <img style="width: 180px;height: 100px" src="img/green.png" alt="">
+                    <div>
+                        <h3 style="margin-bottom: 30px">玉星级</h3>
+                        <p>西班牙凉透了根廷凉根廷凉根廷凉根廷凉根廷凉</p>
+                        <p style="margin-bottom: 20px">
+                            西班牙凉透了根廷凉根廷凉根廷凉根廷凉根廷
+                        <p>
+                        <ul>
+                            <li>升杯邀请券</li>
+                            <li>升杯邀请券</li>
+                            <li>升杯邀请券</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div id="card3">
+                    <img style="width: 180px;height: 100px" src="img/gold.png" alt="">
+                    <div>
+                        <h3 style="margin-bottom: 30px">金星级</h3>
+                        <p>德国凉透了根廷凉根廷凉根廷凉根廷凉根廷凉</p>
+                        <p style="margin-bottom: 20px">
+                            德国凉透了根廷凉根廷凉根廷凉根廷凉根廷
+                        <p>
+                        <ul>
+                            <li>升杯邀请券</li>
+                            <li>升杯邀请券</li>
+                            <li>升杯邀请券</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div id="con_right_center">
+            <div id="fa">
+                <div>
+                    <h3>加入星星俱乐部</h3>
+                    <p>
+                        只需要积分红，你就可以牛逼牛逼再牛逼
+                        ，长得跟牛逼长得跟牛逼长得跟牛逼
+                    </p>
+                    <a href="">创建账户</a>
+                </div>
+                <div style="border-left:1px solid gray ">
+                    <h3>加入星星俱乐部</h3>
+                    <p>
+                        只需要积分红，你就可以牛逼牛逼再牛逼
+                        ，长得跟牛逼长得跟牛逼长得跟牛逼
+                    </p>
+                    <a href="">登录</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="con_right_foot">
+            <div id="top1">星享卡常见问题</div>
+            <div class="foot_question" id="foot_question1">
+                <h2>1.1什么是星享俱乐部</h2>
+                <img src="img/icon-chevron-down.svg" alt="">
+                <p>
+                    中国毫升能以的第几能以的第几节神的节神的社UI能以
+                    的第几节神的直升杯能以的第几节神的节神的社UI能以
+                    的第几节神的直升杯能以的第几节神的直升杯能以的第
+                    几节神的直升杯能以的第几节神的直升杯能以的第几节
+                    神的直升杯能以的第几节神的直升杯能以的第几节神的
+                    直升杯能以的第几节神的直升杯能以的第几节神的直升
+                </p>
+            </div>
+            <div class="foot_question" id="foot_question2">
+                <h2>1.2如何加入星享俱乐部</h2>
+                <img src="img/icon-chevron-down.svg" alt="">
+                <p>
+                    中国毫升能以的第几能以的第几节神的节神的社UI能以
+                    的第几节神的直升杯能以的第几节神的节神的社UI能以
+                    的第几节神的直升杯能以的第几节神的直升杯能以的第
+                    几节神的直升杯能以的第几节神的直升杯能以的第几节
+                    神的直升杯能以的第几节神的直升杯能以的第几节神的
+                    直升杯能以的第几节神的直升杯能以的第几节神的直升
+                </p>
+            </div>
+            <div class="foot_question" id="foot_question3">
+                <h2>1.3星享俱乐部会员等级制度</h2>
+                <img src="img/icon-chevron-down.svg" alt="">
+                <p>
+                    中国毫升能以的第几能以的第几节神的节神的社UI能以
+                    的第几节神的直升杯能以的第几节神的节神的社UI能以
+                    的第几节神的直升杯能以的第几节神的直升杯能以的第
+                    几节神的直升杯能以的第几节神的直升杯能以的第几节
+                    神的直升杯能以的第几节神的直升杯能以的第几节神的
+                    直升杯能以的第几节神的直升杯能以的第几节神的直升
+                </p>
+            </div>
+        </div>
+
+        <div id="con_right_final">查看更多</div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
